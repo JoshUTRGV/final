@@ -1,0 +1,8 @@
+<div class="container">
+	<h1>Welcome <%= current_user.first_name %> <%= current_user.last_name %></h1>
+	<h1>user id: <%= current_user.id %></h1>
+
+	<td><a href="/profile/update/<%= current_user.id %>" class="btn btn-warning">Update Profile</a></td>
+	<td><a href="/item/create" class="btn btn-warning">Add Item</a></td>
+	<td><a href="/posts/my_posts" class="btn btn-warning">My Items</a></td>
+</div>

@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/">
+    <i class="fas fa-home"></i>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+
+      <% if current_user == nil %>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sign_up">Sign Up</a>
+        </li>
+
+      <% elsif current_user.pro == true %>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">My Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mess&alerts">Messeges and Alerts</a>
+        </li>
+
+      <% elsif current_user.pro == false %>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">My Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/become_pro">Become a Pro User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mess&alerts">Messeges and Alerts</a>
+        </li>
+
+      <% end %>
+        <li class="nav-item">
+          <a class="nav-link" href="/items">Posts</a>
+        </li>
+
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0" method="post" action="/search">
+      <input class="form-control mr-sm-2" type="text" name= "search" placeholder="Search" aria-label="Search" required>
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

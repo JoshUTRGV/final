@@ -1,0 +1,27 @@
+<% if @messeges %>
+    <table>
+
+        <%@messeges.each do |m|%>
+        <tr valign="top">
+        <td><a> <% m.id %></a></td>
+
+        <th><td>From : <%=m.from_who%></td>
+            <td>
+                <%=m.reason%>
+            </td>
+        </th>
+
+        <th span="2">
+            <td><%=m.statment%></td>
+        </th>
+
+        <th span="2">
+            <td><form class="" action="/rent_confirm/<%= m.id %>" method="POST">
+                <button type="submit" name="button" class="btn btn-danger">Confirm</button>
+            </form></td>
+        </th>
+        <% end %>
+    </table>
+<% else %>
+    <Strong>So many cobwebs up here.</Strong>
+<% end %>

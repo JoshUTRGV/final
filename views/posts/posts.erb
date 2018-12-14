@@ -1,0 +1,31 @@
+<% if @items %>
+    <table>
+
+        <%@items.each do |i|%>
+        <tr valign="top">
+        <td><a href="/item/<%= i.id %>" class="btn btn-warning"><%= i.id %></a></td>
+        <td><%=i.name%></td>
+        <td><%=i.description%></td>
+        <td><%=i.cost_Day%></td>
+        <td><%=i.cost_Week%></td>
+
+            <% if current_user != nil %> <!-- if person is not a user deny all functionality -->
+                <% if current_user.id == i.owner_id %> <!-- if person ownes this thing -->
+                    <td><a href="/post/update/<%= i.id %>" class="btn btn-warning">Update Item</a></td>
+                    <td><form class="" action="/remove/<%=i.id %>" method="POST">
+                        <button type="submit" name="button" class="btn btn-danger">Delete</button>
+                    </form></td>
+
+                <% else %>
+
+                    <td><form class="" action="/rent_out/<%=i.id %>" method="POST">
+                        <button type="submit" name="button" class="btn btn-info">Rent It</button>
+                    </form></td>
+
+                <% end %>
+            <% end %>
+        <% end %>
+    </table>
+<% else %>
+    <Strong>Nothing Here But Some Old Doilies</Strong>
+<% end %>

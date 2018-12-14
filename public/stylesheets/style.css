@@ -1,0 +1,49 @@
+html, body {
+  /* margin: 0 auto; */
+}
+
+body {
+  padding-top: 3.5rem;
+  background-color: #C6AF88;
+}
+
+a {
+  color: #742B1F !important;
+}
+
+.navbar {
+  background-color: #C6AF88 !important;
+}
+
+.btn {
+  color: #7F3723 !important;
+}
+
+.tron {
+  background-image: url('https://i.ibb.co/hXjxjQm/4e7840d34c8c1d27b2415aed994fe283-1.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 440px;
+}
+
+.tron1 {
+  background-image: url('https://image.shutterstock.com/image-vector/pp-letter-logo-260nw-738050224.jpg');
+  position: left;
+  height: 440px;
+  width:440px;
+}
+
+footer {
+  background-color: #7F3723;
+  position: absolute;
+  bottom: 0;
+  height: 140px;
+  width: 100%;
+}
+
+
+#fonts {
+  color: #FFFFFF;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}

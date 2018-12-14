@@ -1,0 +1,47 @@
+<!-- <form method="post" action="/item/create" enctype="multipart/form-data">
+	<input class="form-control" type="text" placeholder="name" name="name" required />
+
+  	<textarea class="form-control" rows="10" cols="60" placeholder="description" name="description" required></textarea>
+
+	<input class="form-control" type="number" placeholder="cost per day" name="cost_per_day" step="0.01" required />
+
+	<input class="form-control" type="number" placeholder="cost per week" name="cost_per_week" step="0.01" required />
+
+  <button class="form-control" type="submit">Create Item</button>
+</form>
+ -->
+
+<form action="/item/create" method="POST" enctype="multipart/form-data">
+	<table align = "center">
+		<th scope="2">
+			What do you want to rent out
+		</th>
+		<body>
+			<div>
+			<tr><td>Title: </td>
+				<td><input type="text" name="name" required></td>
+			</tr></div>
+
+			<div>
+			<tr><td colspan = "2">Descripiton:</td></tr>
+				<td colspan = "2"><textarea name="descripiton" rows="10" cols="60" required></textarea></td>
+			</tr></div>
+
+			<tr><td>Cost per Day: </td>
+				<td><input type="number" name="cost_per_day" step="0.01" required></td>
+			</tr></div>
+
+			<tr><td>Cost per Week: </td>
+				<td><input type="number" name="cost_per_week" step="0.01" required></td>
+			</tr></div>
+
+			 <div>
+<!--
+			<tr><td colspan = "2">Image</td></tr>
+				<td colspan = "2"><input type="file" name="filename"></td>
+			</tr></div>
+ -->
+			 <tr><td><input type="submit" name="" value="Post Your Item" ></td></tr>
+		</body>
+	</table>
+</form> 
